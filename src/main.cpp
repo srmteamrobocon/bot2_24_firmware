@@ -15,7 +15,6 @@
 #define COLOR_ORDER GRB
 CRGB leds[NUM_LEDS];
 
-
 #define _LOG_MOTOR_PWM_ 0
 #define _LOG_ENCODER_TICK_RPM_ 0
 #define _LOG_PID_STATS_ 0
@@ -98,7 +97,6 @@ void setup()
   // Status led init
   FastLED.addLeds<LED_TYPE, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS).setCorrection(TypicalLEDStrip);
   FastLED.setBrightness(BRIGHTNESS);
-  
 }
 
 // CORE 1 Main Loop
@@ -109,7 +107,6 @@ void loop()
     byte cmd = Serial.read();
     run_commands(cmd);
   }
-
 
   motor_1.setSpeed(DriveData.motor_1);
   motor_2.setSpeed(DriveData.motor_2);
