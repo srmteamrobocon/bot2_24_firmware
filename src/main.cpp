@@ -8,7 +8,7 @@
 #include <FastLED.h>
 
 // Status Led init
-#define LED_PIN 17
+#define LED_PIN 28
 #define NUM_LEDS 2
 #define BRIGHTNESS 200
 #define LED_TYPE WS2812B
