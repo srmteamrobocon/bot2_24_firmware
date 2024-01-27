@@ -15,7 +15,6 @@
 #define COLOR_ORDER GRB
 CRGB leds[NUM_LEDS];
 
-<<<<<<< HEAD
 bool CONNECTED = false; // Stores the Drive Hub connection status
 bool FIRST_BOOT = true; // Stores the Drive Hub first connection status
 int warning_led_blink_rate = 200; // In Millisecond
@@ -26,8 +25,6 @@ unsigned long previousMillis = 0;            // Stores the last time the LED was
 unsigned long previousMillis_discon_led = 0; // Stores the last time the LED was updated
 bool connection_led_state = false;
 
-=======
->>>>>>> 1a0b34323716d05ef3f12f02300d50ab10701106
 #define _LOG_MOTOR_PWM_ 0
 #define _LOG_ENCODER_TICK_RPM_ 0
 #define _LOG_PID_STATS_ 0
@@ -126,7 +123,6 @@ void loop()
     previousMillis = currentMillis;
   }
 
-<<<<<<< HEAD
   // Power up the motor if DrveHub is connected
   if (CONNECTED){
     motor_1.setSpeed(DriveData.motor_1);
@@ -173,12 +169,6 @@ void loop()
     FastLED.show();
     }
   }
-=======
-  motor_1.setSpeed(DriveData.motor_1);
-  motor_2.setSpeed(DriveData.motor_2);
-  motor_3.setSpeed(DriveData.motor_3);
-  motor_4.setSpeed(DriveData.motor_4);
->>>>>>> 1a0b34323716d05ef3f12f02300d50ab10701106
 
   // Serial.print(DriveData.motor_1);
   // Serial.print(" ");
